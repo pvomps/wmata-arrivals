@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>WMATA Arrivals</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<style type="text/css">
+    @import "Arrivals.css";
+</style>
+<script type="text/javascript" src="/System/Library/WidgetResources/AppleClasses/AppleAnimator.js" charset="utf-8"></script>
+<script type="text/javascript" src="/System/Library/WidgetResources/AppleClasses/AppleButton.js" charset="utf-8"></script>
+<script type="text/javascript" src="/System/Library/WidgetResources/AppleClasses/AppleInfoButton.js" charset="utf-8"></script>
+<script type="text/javascript" src="Parts/InfoButton.js" charset="utf-8"></script>
+<script type="text/javascript" src="Parts/GlassButton.js" charset="utf-8"></script>
+<script type="text/javascript" src="Arrivals.js" charset="utf-8"></script>
+</head>
+
+<body>
+	<div id="front">
+		<img id="front-img" src="Images/2-img.png">
+		<iframe align="top" frameborder="0" height="100%" id="theframe" scrolling="no" src="" width="100%"></iframe>
+		<div class="apple-no-children" id="info" apple-part="com.apple.Dashcode.part.infobutton" apple-default-image-visibility="hidden"></div>
+	</div>
+	<div id="back">
+		<img id="back-img" src="Images/2-img.png">
+		<h1 id="select-station">Station</h1>
+		<form>
+			<select id="station_list">
+				<option value="92">Addison Road-Seat Pleasant</option>
+				<option value="85">Anacostia</option>
+				<option value="81">Archives-Navy Memorial-Penn Quarter</option>
+				<option value="42">Arlington Cemetery</option>
+				<option value="99">Ballston-MU</option>
+				<option value="90">Benning Road</option>
+				<option value="12">Bethesda</option>
+				<option value="47">Braddock Road</option>
+				<option value="89">Branch Ave</option>
+				<option value="27">Brookland-CUA</option>
+				<option value="91">Capitol Heights</option>
+				<option value="59">Capitol South</option>
+				<option value="66">Cheverly</option>
+				<option value="97">Clarendon</option>
+				<option value="8">Cleveland Park</option>
+				<option value="79">College Park-U of MD</option>
+				<option value="75">Columbia Heights</option>
+				<option value="86">Congress Heights</option>
+				<option value="96">Court House</option>
+				<option value="45">Crystal City</option>
+				<option value="65">Deanwood</option>
+				<option value="102">Dunn Loring-Merrifield</option>
+				<option value="6">Dupont Circle</option>
+				<option value="100">East Falls Church</option>
+				<option value="60">Eastern Market</option>
+				<option value="49">Eisenhower Avenue</option>
+				<option value="4">Farragut North</option>
+				<option value="38">Farragut West</option>
+				<option value="58">Federal Center SW</option>
+				<option value="53">Federal Triangle</option>
+				<option value="40">Foggy Bottom-GWU</option>
+				<option value="32">Forest Glen</option>
+				<option value="28">Fort Totten</option>
+				<option value="95">Franconia-Springfield</option>
+				<option value="11">Friendship Heights</option>
+				<option value="21">Gallery Pl-Chinatown</option>
+				<option value="76">Georgia Ave-Petworth</option>
+				<option value="34">Glenmont</option>
+				<option value="80">Greenbelt</option>
+				<option value="14">Grosvenor-Strathmore</option>
+				<option value="50">Huntington</option>
+				<option value="23">Judiciary Square</option>
+				<option value="48">King Street</option>
+				<option value="82">L'Enfant Plaza</option>
+				<option value="67">Landover</option>
+				<option value="109">Largo Town Center</option>
+				<option value="36">McPherson Square</option>
+				<option value="13">Medical Center</option>
+				<option value="1">Metro Center</option>
+				<option value="64">Minnesota Ave</option>
+				<option value="110">Morgan Boulevard</option>
+				<option value="70">Mt Vernon Sq 7th St-Convention Center</option>
+				<option value="84">Navy Yard</option>
+				<option value="87">Naylor Road</option>
+				<option value="68">New Carrollton</option>
+				<option value="108">New York Ave-Florida Ave-Gallaudet U</option>
+				<option value="44">Pentagon City</option>
+				<option value="43">Pentagon</option>
+				<option value="61">Potomac Ave</option>
+				<option value="78">Prince George's Plaza</option>
+				<option value="26">Rhode Island Ave-Brentwood</option>
+				<option value="17">Rockville</option>
+				<option value="93">Ronald Reagan Washington National Airport</option>
+				<option value="41">Rosslyn</option>
+				<option value="18">Shady Grove</option>
+				<option value="72">Shaw-Howard U</option>
+				<option value="31">Silver Spring</option>
+				<option value="54">Smithsonian</option>
+				<option value="107">Southern Avenue</option>
+				<option value="63">Stadium-Armory</option>
+				<option value="88">Suitland</option>
+				<option value="29">Takoma</option>
+				<option value="10">Tenleytown-AU</option>
+				<option value="16">Twinbrook</option>
+				<option value="73">U Street/African-Amer Civil War Memorial/Cardozo</option>
+				<option value="25">Union Station</option>
+				<option value="94">Van Dorn Street</option>
+				<option value="9">Van Ness-UDC</option>
+				<option value="103">Vienna/Fairfax-GMU</option>
+				<option value="98">Virginia Square-GMU</option>
+				<option value="83">Waterfront-SEU</option>
+				<option value="101">West Falls Church-VT/UVA</option>
+				<option value="77">West Hyattsville</option>
+				<option value="33">Wheaton</option>
+				<option value="15">White Flint</option>
+				<option value="7">Woodley Park-Zoo/Adams Morgan</option>
+			</select>
+		</form>
+		<a onclick="widget.openURL('http://code.google.com/p/wmata-arrivals/'); return false;" id="srcthis" href="">Project Home</a>
+      	<div id="done" class="apple-no-children" apple-part="com.apple.Dashcode.part.glassbutton">
+	</div>
+</body>
+</html>
+
