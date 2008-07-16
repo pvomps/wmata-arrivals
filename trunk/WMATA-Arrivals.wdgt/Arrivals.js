@@ -183,6 +183,7 @@ function isTransferStation(station_id)
     {
         case '1':
         case '21':
+        case '28':
         case '82':
             retval = true;
             break;
