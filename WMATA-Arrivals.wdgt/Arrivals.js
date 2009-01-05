@@ -120,7 +120,7 @@ function loadStationFromList()
 // the selected station
 function loadStation(station_id)
 {
-	base_station = "http://www.wmata.com:80/metrorail/Stations/showpid/showpid_refresh.cfm?station=";
+	base_station = "http://www.wmata.com:80/rider_tools/pids/showpid.cfm?station_id=";
 
 	theframe = document.getElementById('theframe');
 	theframe.src = "";
@@ -130,7 +130,7 @@ function loadStation(station_id)
 	// a larger background
 	if(isTransferStation(station_id))
     {
-	    window.resizeTo(255,460);
+	    window.resizeTo(300,510);
 	    document.getElementById('front-img').src = "Images/3-bg.png"
 	    document.getElementById('back-img').src = "Images/3-bg.png"
 	}
@@ -140,14 +140,14 @@ function loadStation(station_id)
 	    // down and so we use a slightly taller background
 	    if(isWrappedTitle(station_id))
         {
-	        window.resizeTo(255,290);
+	        window.resizeTo(300,330);
 	        document.getElementById('front-img').src = "Images/2-bg.png"
 	        document.getElementById('back-img').src = "Images/2-bg.png"
         }
         // default/normal background image
         else
         {
-	        window.resizeTo(255,277);
+	        window.resizeTo(300,315);
 	        document.getElementById('front-img').src = "Images/1-bg.png"
 	        document.getElementById('back-img').src = "Images/1-bg.png"
         }
@@ -159,6 +159,7 @@ function isWrappedTitle(station_id)
     retval = false;
     switch(station_id)
     {
+        case '7':
         case '93':
         case '81':
         case '70':
@@ -170,9 +171,6 @@ function isWrappedTitle(station_id)
     
     return retval;
 }
-// 1-bg.img 255x277
-// 2-bg.img 255x288
-// 3-bg.img 255x460
 
 // transfer stations have 4 signs
 // instead of 2
